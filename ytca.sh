@@ -60,6 +60,7 @@ chanName="$(curl -s "$chan/about" | grep -oP '(?<=<title>).*?(?=\s-\sYouTube</ti
 
 
 # execution
+cd
 for tab in ${tabs[@]}
 do
   for part in "videos" "live-chat"; do # add more confs
@@ -73,9 +74,9 @@ do
 done
 
 # result
-if [ -d "$HOME/yt-dlp/download/$chanName" ]; then
+if [[ -d "$HOME/yt-dlp/download/$chanName" ]]; then
   echo "Finshed archiving.
-  Your download is here -> $($HOME/yt-dlp/download/$chanName)"
+  Your download is here -> $HOME/yt-dlp/download/$chanName"
 else
   echo 'Nothing has been downloaded'
 fi
