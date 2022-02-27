@@ -26,7 +26,7 @@ shift $((OPTIND -1))
 
 
 # membership option
-if [[ "$1" -eq 'member' ]]; then
+if [[ "$1" == 'member' ]]; then
   shift
   tabs=('videos' 'membership')
 else
@@ -72,5 +72,9 @@ do
   done
 done
 
-echo "Finshed archiving.
-Your download is here -> $($HOME/yt-dlp/download/$chanName)"
+if [ -d "$HOME/yt-dlp/download/$chanName" ]; then
+  echo "Finshed archiving.
+  Your download is here -> $($HOME/yt-dlp/download/$chanName)"
+else
+  echo 'Nothing has been downloaded'
+fi
