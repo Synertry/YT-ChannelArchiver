@@ -65,9 +65,9 @@ do
   for part in "videos" "live-chat"; do # add more confs
     echo "Downloading $part in tab $videos"
     logName="yt-dlp_${chanName}_$part"
-    archiveFile="$HOME/yt-dlp/download/$chanName/Archive_IDs_${chanName}_tab-${tab}_part-${part}.txt"
-
-    yt-dlp --config-locations "yt-dlp-$part.conf" --download-archive "$archiveFile" "$chan/$tab" 2>&1 | tee "$logName.log"
+    archive="$HOME/yt-dlp/download/$chanName/Archive_IDs_${chanName}_tab-${tab}_part-${part}.txt"
+    config="$HOME/yt-dlp/configs/ytca-$part.conf"
+    yt-dlp --config-locations "$config" --download-archive "$archive" "$chan/$tab" 2>&1 | tee "$logName.log"
     mv "$logName.log" "$HOME/yt-dlp/logs/${logName}_$(date +'%Y%m%d').log"
   done
 done
