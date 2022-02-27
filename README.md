@@ -28,6 +28,8 @@ Note: *If you are here to archive the channel Rushia Ch. 潤羽るしあ*.
 - [x] bash options and subcommands
 - [ ] playlists
 - [ ] featured
+- [ ] server background task (overkill?)
+- [ ] Windows support with powershell
 
 
 ## Dependencies
@@ -41,7 +43,7 @@ To fulfill dependencies follow [Installation](https://github.com/Synertry/YT-Cha
 
 ## Installation
 
-Install all dependencies cli dependencies
+Install all cli dependencies
 ```sh
 sudo apt install -y python3 python-is-python3 python3-pip wget curl tar
 ```
@@ -76,6 +78,10 @@ If you have membership access to the specified channel add an member subcommand 
 ytca.sh member https://www.youtube.com/channel/UCZVaNEXtmLABc55k_R7MPCg
 ```
 If you do not have access to membership, then you will be redirected to /featured, which would likely mean duplicate videos
+
+### Server
+
+*For unattended usage on servers I recommend [screen](https://linuxize.com/post/how-to-use-linux-screen/) or [tmux](https://linuxize.com/post/getting-started-with-tmux/) and technical experience.*
 
 
 ## Uninstall

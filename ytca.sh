@@ -61,8 +61,7 @@ chanName="$(curl -s "$chan/about" | grep -oP '(?<=<title>).*?(?=\s-\sYouTube</ti
 
 # execution
 cd
-for tab in ${tabs[@]}
-do
+for tab in "${tabs[@]}"; do
   for part in "videos" "live-chat"; do # add more confs
     echo "Downloading $part in tab $videos"
     logName="yt-dlp_${chanName}_$part"

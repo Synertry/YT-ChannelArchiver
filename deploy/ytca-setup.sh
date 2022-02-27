@@ -3,8 +3,8 @@
 # Required dependencies
 python3 -m pip install --force-reinstall https://github.com/yt-dlp/yt-dlp/archive/master.zip
 if [ $? -ne 0 ]; then
-echo "Packages missing.
-Run: sudo apt install -y python3 python-is-python3 python3-pip wget curl tar"
+echo 'Packages missing.'
+echo '    Run: sudo apt install -y python3 python-is-python3 python3-pip wget curl tar'
 exit 1
 fi
 
