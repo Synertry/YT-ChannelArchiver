@@ -28,6 +28,7 @@ wget -N https://raw.githubusercontent.com/Synertry/YT-ChannelArchiver/main/confi
 # Patched ffmpeg: https://github.com/yt-dlp/FFmpeg-Builds
 wget -N https://github.com/yt-dlp/FFmpeg-Builds/releases/download/latest/ffmpeg-master-latest-linux64-gpl.tar.xz -P ~/yt-dlp/
 tar xvf ~/yt-dlp/ffmpeg-master-latest-linux64-gpl.tar.xz -C ~/yt-dlp/ffmpeg-patched --strip-components 1 --remove-files
+rm ~/yt-dlp/ffmpeg-master-latest-linux64-gpl.tar.xz
 
 # Main script
 wget -N https://raw.githubusercontent.com/Synertry/YT-ChannelArchiver/main/ytca.sh -P ~/.local/bin/

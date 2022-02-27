@@ -72,6 +72,7 @@ do
   done
 done
 
+# result
 if [ -d "$HOME/yt-dlp/download/$chanName" ]; then
   echo "Finshed archiving.
   Your download is here -> $($HOME/yt-dlp/download/$chanName)"
