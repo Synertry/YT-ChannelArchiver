@@ -26,7 +26,7 @@ shift $((OPTIND -1))
 
 
 # membership option
-if [[ "$1" -eq 'member']]; then
+if [[ "$1" -eq 'member' ]]; then
   shift
   tabs=('videos' 'membership')
 else
