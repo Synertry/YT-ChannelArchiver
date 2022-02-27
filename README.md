@@ -13,6 +13,23 @@ Note: *If you are here to archive the channel Rushia Ch. 潤羽るしあ*.
 *[https://archive.ragtag.moe/channel/UCl_gCybOJRIgOXw6Qb4qJzQ](https://archive.ragtag.moe/channel/UCl_gCybOJRIgOXw6Qb4qJzQ)*
 
 
+## TODO
+
+- [x] use config files
+- [x] scaffold directory structure
+- [x] install/setup script
+- [x] central main script
+- [x] url input checks
+- [x] proper README
+- [x] additional all-in-one config file
+- [x] uninstall script
+- [x] support membership-only download
+- [x] code cleanup by looping
+- [x] bash options and subcommands
+- [ ] playlists
+- [ ] featured
+
+
 ## Dependencies
 
 - Python3
