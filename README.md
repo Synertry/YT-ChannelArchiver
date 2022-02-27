@@ -13,23 +13,12 @@ Note: *If you are here to archive the channel Rushia Ch. 潤羽るしあ*.
 *[https://archive.ragtag.moe/channel/UCl_gCybOJRIgOXw6Qb4qJzQ](https://archive.ragtag.moe/channel/UCl_gCybOJRIgOXw6Qb4qJzQ)*
 
 
-## TODO
-
-- [x] use config files
-- [x] scaffold directory structure
-- [x] install/setup script
-- [x] central main script
-- [x] url input checks
-- [x] proper README
-- [x] additional all-in-one config file
-- [x] uninstall script
-- [x] support membership-only download
-- [x] code cleanup by looping
-- [x] bash options and subcommands
-- [ ] playlists
-- [ ] featured
-- [ ] server background task (overkill?)
-- [ ] Windows support with powershell
+## Quickstart
+Tl;dr: On Debian & Ubuntu to archive a channel run this two lines (replace youtube link with target channel url): 
+```sh
+sudo apt install -y python3 python-is-python3 python3-pip wget curl tar && curl -fsSL https://raw.githubusercontent.com/Synertry/YT-ChannelArchiver/main/deploy/ytca-setup.sh | bash
+ytca.sh https://www.youtube.com/channel/UCl_gCybOJRIgOXw6Qb4qJzQ
+```
 
 
 ## Dependencies
@@ -70,12 +59,12 @@ DO NOT modify the name. It needs to be exactly youtube.com_cookies.txt, like
 Use your desired link to channel
 
 ```sh
-ytca.sh https://www.youtube.com/channel/UCZVaNEXtmLABc55k_R7MPCg
+ytca.sh https://www.youtube.com/channel/UCl_gCybOJRIgOXw6Qb4qJzQ
 ```
 
 If you have membership access to the specified channel add an member subcommand to also archive membership-only videos
 ```sh
-ytca.sh member https://www.youtube.com/channel/UCZVaNEXtmLABc55k_R7MPCg
+ytca.sh member https://www.youtube.com/channel/UCl_gCybOJRIgOXw6Qb4qJzQ
 ```
 If you do not have access to membership, then you will be redirected to /featured, which would likely mean duplicate videos
 
@@ -96,6 +85,24 @@ OS apt packages will not be removed.
 ```sh
 curl -fsSL https://raw.githubusercontent.com/Synertry/YT-ChannelArchiver/main/deploy/ytca-uninstall.sh | bash
 ```
+
+## TODO
+
+- [x] use config files
+- [x] scaffold directory structure
+- [x] install/setup script
+- [x] central main script
+- [x] url input checks
+- [x] proper README
+- [x] additional all-in-one config file
+- [x] uninstall script
+- [x] support membership-only download
+- [x] code cleanup by looping
+- [x] bash options and subcommands
+- [ ] playlists
+- [ ] featured
+- [ ] server background task (overkill?)
+- [ ] Windows support with powershell
 
 
 ## More
