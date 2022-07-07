@@ -5,6 +5,7 @@
 # YouTube Channel Archiver
 
 Bootstrap and ready to use script to archive all videos from YouTube channel including metadata like comments and live chats.
+NOW supporting Docker, [see here](https://github.com/Synertry/YT-ChannelArchiver#Docker).
 
 
 Note: *If you are here to archive the channel Rushia Ch. 潤羽るしあ*.
@@ -68,6 +69,26 @@ ytca.sh member https://www.youtube.com/channel/UCl_gCybOJRIgOXw6Qb4qJzQ
 ```
 If you do not have access to membership, then you will be redirected to /featured, which would likely mean duplicate videos
 
+## Docker
+
+Instead of provisioning a whole vm/os or modifying your system with my script there is now a Docker way.
+```sh
+docker pull synertry/ytca:v1
+```
+Alternatively you can build the image yourself with, which may take about 5 minutes.
+Download the Dockerfile into a folder of your choosing (maybe not the default Downloads).
+In the shell in the same folder run:
+```sh
+docker build -t ytca .
+```
+
+
+You can then archive a channel without even entering the container with:
+```sh
+docker run --rm -v "./download:/root/yt-dlp/download" ytca https://www.youtube.com/channel/UCl_gCybOJRIgOXw6Qb4qJzQ
+```
+The -v flag with the download path is important to persist your downloads after container destruction.
+
 ### Server
 
 *For unattended usage on servers I recommend [screen](https://linuxize.com/post/how-to-use-linux-screen/) or [tmux](https://linuxize.com/post/getting-started-with-tmux/) and technical experience.*
@@ -99,6 +120,7 @@ curl -fsSL https://raw.githubusercontent.com/Synertry/YT-ChannelArchiver/main/de
 - [x] support membership-only download
 - [x] code cleanup by looping
 - [x] bash options and subcommands
+- [x] dockerfile
 - [ ] playlists
 - [ ] featured
 - [ ] server background task (overkill?)
